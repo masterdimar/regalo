@@ -6,7 +6,7 @@ import type { NextRequest } from 'next/server'
 export async function middleware(req) {
   const { nextUrl: url, geo } = req
   
-  const country = geo.country || 'us'
+  const country = geo.country || 'US'
 
   let geoUrl = `/${country}${url.pathname}`
   url.pathname = geoUrl
