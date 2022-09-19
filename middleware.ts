@@ -8,7 +8,7 @@ export async function middleware(req) {
   
   const country = geo.country || 'US'
 
-  let geoUrl = `/${country}${url.pathname}`
+  let geoUrl = `/${country.toLowerCase()}${url.pathname}`
   url.pathname = geoUrl
     
   return NextResponse.redirect(url)
